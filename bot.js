@@ -25,6 +25,9 @@ const stream = {
 
 const comments = storm.CommentStream(stream);
 
+//Very primitive, not smart filter. It'll do. 
+const characterList = ["akuma", "alisa", "asuka", "bob", "bryan", "claudio", "dragunov", "eddy", "feng", "geese", "gigas", "heihachi", "hworang", "jack7", "jin", "josie", "katarina", "kazumi", "kazuya", "king", "kuma", "lars", "law", "lee", "leo", "lili", "lucky", "master", "miguel", "nina", "panda", "paul", "shaheen", "steve", "xiaoyu", "yoshimitsu", "eliza", "anna", "lei", "noctis"]
+
 comments.on("comment", comment => {
     if (comment.body.includes("!frames")) {
         let body = comment.body;
@@ -41,8 +44,11 @@ comments.on("comment", comment => {
         else if (term[1] === "Master") {
             comment.reply(`[Master Raven's Frame Data](http://rbnorway.org/master-raven-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
         }
-        else {
+        else if (characterList.includes(term[1].toLowerCase())) {
             comment.reply(`[${term[1]}'s Frame Data](http://rbnorway.org/${term[1]}-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
+        }
+        else {
+            comment.reply("I couldn't find that character.")
         }   
     }
 });
