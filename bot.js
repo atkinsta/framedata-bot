@@ -45,5 +45,5 @@ app.get("/", (req, res) => {
 });
 
 setInterval(function() {
-    http.get("https://pure-savannah-70164.herokuapp.com/");
+    http.get("http://pure-savannah-70164.herokuapp.com/");
 }, 300000);
