@@ -33,13 +33,13 @@ comments.on("comment", comment => {
         console.log(body.match(reg));
         let term = body.match(reg);
         if (term[1] === "Lucky") {
-            comment.reply(`[Lucky Chloe]'s Frame Data](http://rbnorway.org/lucky-chloe-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
+            comment.reply(`[Lucky Chloe's Frame Data](http://rbnorway.org/lucky-chloe-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
         }
         else if (term[1] === "Devil") {
-            comment.reply(`[Devil Jin]'s Frame Data](http://rbnorway.org/devil-jin-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
+            comment.reply(`[Devil Jin's Frame Data](http://rbnorway.org/devil-jin-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
         }
         else if (term[1] === "Master") {
-            comment.reply(`[Master Raven]'s Frame Data](http://rbnorway.org/master-raven-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
+            comment.reply(`[Master Raven's Frame Data](http://rbnorway.org/master-raven-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
         }
         comment.reply(`[${term[1]}'s Frame Data](http://rbnorway.org/${term[1]}-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
     }
