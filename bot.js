@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const http = require("htpp");
 
 const Snoowrap = require("snoowrap");
 const Snoostorm = require("snoostorm");
@@ -41,4 +42,8 @@ app.listen(process.env.PORT, () => {
 
 app.get("/", (req, res) => {
     res.json("All good");
-}) 
+});
+
+setInterval(function() {
+    http.get("https://pure-savannah-70164.herokuapp.com/");
+}, 300000);
