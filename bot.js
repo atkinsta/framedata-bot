@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const http = require("htpp");
+const http = require("http");
 
 const Snoowrap = require("snoowrap");
 const Snoostorm = require("snoostorm");
