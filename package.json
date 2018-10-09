@@ -1,0 +1,31 @@
+{
+  "name": "framedata-bot",
+  "version": "1.0.0",
+  "description": "A frame data bot for Reddit",
+  "main": "bot.js",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "snoostorm": "^0.0.5",
+    "snoowrap": "^1.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atkinsta/framedata-bot.git"
+  },
+  "keywords": [
+    "Frame",
+    "data",
+    "bot",
+    "reddit"
+  ],
+  "author": "atkinsta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atkinsta/framedata-bot/issues"
+  },
+  "homepage": "https://github.com/atkinsta/framedata-bot#readme"
+}
