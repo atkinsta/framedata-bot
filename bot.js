@@ -1,4 +1,6 @@
 require("dotenv").config();
+const express = require("express");
+const app = express();
 
 const Snoowrap = require("snoowrap");
 const Snoostorm = require("snoostorm");
@@ -32,3 +34,11 @@ comments.on("comment", comment => {
         comment.reply(`[${term[1]}'s Frame Data](http://rbnorway.org/${term[1]}-t7-frames/)\n\n\n^^This ^^is ^^a ^^bot. ^^To ^^learn ^^more ^^about ^^usage ^^visit [^^my ^^github](http://www.github.com/atkinsta/framedata-bot)`)
     }
 });
+
+app.listen(process.env.PORT, () => {
+    console.log("Bot started");
+});
+
+app.get("/", (req, res) => {
+    res.json("All good");
+}) 
